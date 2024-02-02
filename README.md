@@ -44,10 +44,40 @@ CREATE TABLE users (
 );
 ```
 
+```
+CREATE TABLE accounts (
+  account VARCHAR,
+  email VARCHAR(255) NOT NULL,
+  name VARCHAR(255),
+  username VARCHAR(255),
+  bankname VARCHAR(255),
+  branch VARCHAR(255)
+);
+```
+
+```
+ALTER TABLE accounts
+ALTER COLUMN account TYPE VARCHAR USING account::VARCHAR;
+```
+
+```
+ALTER TABLE accounts 
+  ADD COLUMN account VARCHAR,
+  ADD COLUMN email VARCHAR(255) NOT NULL,
+  ADD COLUMN name VARCHAR(255),
+  ADD COLUMN username VARCHAR(255),
+  ADD COLUMN bankname VARCHAR(255),
+  ADD COLUMN branch VARCHAR(255);
+```
+
 Insert a row for testing:
 
 ```
-INSERT INTO users (id, email, name, username) VALUES (1, 'me@site.com', 'Me', 'username');
+INSERT INTO accounts (id, email, name, username, bankname, branch) VALUES (0500179099534, 'paulcornelius006@gmail.com', 'Corney', 'corney', 'Equity Bank', 'Kakamega');
+```
+
+```
+INSERT INTO users (id, email, name, username) VALUES (0500, 'me@site.com', 'Me', 'username');
 ```
 
 Finally, run the following commands to start the development server:
