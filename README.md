@@ -4,19 +4,17 @@
   <img alt="Shows all of the tools in the stack for this template, also listed in the README file." src="https://user-images.githubusercontent.com/9113740/201498152-b171abb8-9225-487a-821c-6ff49ee48579.png">
 </picture>
 
-<div align="center"><strong>Next.js 14 Admin Dashboard Template</strong></div>
+<div align="center"><strong>Cornelius Admin Dashboard</strong></div>
 <div align="center">Built with the Next.js App Router</div>
 <br />
 <div align="center">
 <a href="http://admin-dash-template.vercel.sh/">Demo</a>
-<span> · </span>
-<a href="https://vercel.com/templates/next.js/admin-dashboard-tailwind-planetscale-react-nextjs">Clone & Deploy</a>
-<span>
+<span> 
 </div>
 
 ## Overview
 
-This is a starter template using the following stack:
+This is a template using the following stack:
 
 - Framework - [Next.js 14](https://nextjs.org/14)
 - Language - [TypeScript](https://www.typescriptlang.org)
@@ -60,3 +58,14 @@ pnpm dev
 ```
 
 You should now be able to access the application at http://localhost:3000.
+
+```
+docker run -d \
+  --name postgres-container \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=postgres \
+  -p 5432:5432 \
+  postgres:latest
+
+```
