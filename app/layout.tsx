@@ -6,9 +6,9 @@ import Toast from './toast';
 import { Suspense } from 'react';
 
 export const metadata = {
-  title: 'Admin Portal',
+  title: 'Management Portal',
   description:
-    'A user admin dashboard.'
+    'A user management dashboard.'
 };
 
 export default function RootLayout({

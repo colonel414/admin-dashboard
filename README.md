@@ -62,8 +62,7 @@ ALTER COLUMN account TYPE VARCHAR USING account::VARCHAR;
 
 ```
 ALTER TABLE accounts 
-  ADD COLUMN account VARCHAR,
-  ADD COLUMN email VARCHAR(255) NOT NULL,
+  REMOVE COLUMN email VARCHAR(255);
   ADD COLUMN name VARCHAR(255),
   ADD COLUMN username VARCHAR(255),
   ADD COLUMN bankname VARCHAR(255),
@@ -73,7 +72,7 @@ ALTER TABLE accounts
 Insert a row for testing:
 
 ```
-INSERT INTO accounts (id, email, name, username, bankname, branch) VALUES (0500179099534, 'paulcornelius006@gmail.com', 'Corney', 'corney', 'Equity Bank', 'Kakamega');
+INSERT INTO accounts (id, username, accountType, balance) VALUES (0500179099534, 'Corney', 'Current', '989000');
 ```
 
 ```

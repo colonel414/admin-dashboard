@@ -28,17 +28,17 @@ const app = [
 
 const data = [
   {
-    category: 'Website',
+    category: 'Rooms',
     stat: '10,234',
     data: website
   },
   {
-    category: 'Online Shop',
+    category: 'Water Usage',
     stat: '12,543',
     data: shop
   },
   {
-    category: 'Mobile App',
+    category: 'Electricity Usage',
     stat: '2,543',
     data: app
   }
