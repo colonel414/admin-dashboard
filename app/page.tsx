@@ -1,7 +1,8 @@
 import { sql } from '@vercel/postgres';
-import { Card, Title, Text } from '@tremor/react';
+import { Card, Title, Text } from '@tremor/react'; // ,List
 import Search from './search';
 import UsersTable from './table';
+
 
 interface User {
   id: number;
@@ -10,6 +11,7 @@ interface User {
   email: string;
 }
 
+
 export default async function IndexPage({
   searchParams
 }: {
@@ -17,8 +19,8 @@ export default async function IndexPage({
 }) {
   const search = searchParams.q ?? '';
   const result = await sql`
-    SELECT id, name, username, email 
-    FROM users 
+    SELECT id, name, username, email
+    FROM users
     WHERE name ILIKE ${'%' + search + '%'};
   `;
   const users = result.rows as User[];
@@ -26,10 +28,10 @@ export default async function IndexPage({
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
       <Title>Users</Title>
-      <Text>A list of users retrieved from a Postgres database.</Text>
+      <Text>Available users</Text>
       <Search />
       <Card className="mt-6">
-        <UsersTable users={users} />
+        <UsersTable users={users} /> {/* Pass the 'users' array to the UsersTable component */}
       </Card>
     </main>
   );

@@ -23,10 +23,11 @@ export default function UsersTable({ users }: { users: User[] }) {
           <TableHeaderCell>Name</TableHeaderCell>
           <TableHeaderCell>Username</TableHeaderCell>
           <TableHeaderCell>Email</TableHeaderCell>
+          <TableHeaderCell>ID</TableHeaderCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        {users.map((user) => (
+        {users && users.map((user) => (
           <TableRow key={user.id}>
             <TableCell>{user.name}</TableCell>
             <TableCell>
@@ -34,6 +35,9 @@ export default function UsersTable({ users }: { users: User[] }) {
             </TableCell>
             <TableCell>
               <Text>{user.email}</Text>
+            </TableCell>
+            <TableCell>
+              <Text>{user.id}</Text>
             </TableCell>
           </TableRow>
         ))}

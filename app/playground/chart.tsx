@@ -9,9 +9,24 @@ const data = [
     Profit: 2400
   },
   {
-    Month: 'Feb 21',
+    Month: 'Feb 25',
     Sales: 1890,
     Profit: 1398
+  },
+  {
+    Month: 'Feb 11',
+    Sales: 1890,
+    Profit: 1398
+  },
+  {
+    Month: 'Feb 20',
+    Sales: 1890,
+    Profit: 1398
+  },
+  {
+    Month: 'Feb 20',
+    Sales: 6000,
+    Profit: 5454
   },
   {
     Month: 'Jan 22',
@@ -23,8 +38,8 @@ const data = [
 export default function Example() {
   return (
     <Card className="mt-8">
-      <Title>Performance</Title>
-      <Text>Comparison between Sales and Profit</Text>
+      <Title>Usage</Title>
+      <Text>Usage data</Text>
       <AreaChart
         className="mt-4 h-80"
         data={data}
@@ -32,7 +47,7 @@ export default function Example() {
         index="Month"
         colors={['indigo', 'fuchsia']}
         valueFormatter={(number: number) =>
-          `$ ${Intl.NumberFormat('us').format(number).toString()}`
+          `sh ${Intl.NumberFormat('us').format(number).toString()}`
         }
         yAxisWidth={60}
       />
