@@ -17,7 +17,7 @@ export default function Toast() {
           target="_blank"
           rel="noreferrer"
         >
-          Self hosted
+          Do It Yourself
         </a>
       </div>
     </div>
